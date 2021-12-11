@@ -3,8 +3,8 @@ jobs:
   build:
     working_directory: /var/www/html
     docker:
-#      - image: circleci/php:8.0-apache #php:7.1-apache                                                                                                              
-       - image: circleci/php:7.2-apache
+      - image: circleci/php:8.0-apache #php:7.1-apache                                                                                                              
+       # - image: circleci/php:7.2-apache
 
     steps:
       - checkout
@@ -23,7 +23,7 @@ jobs:
   deploy: &deploy
       working_directory: /var/www/html
       docker:
-#       - image: circleci/php:8.0-apache                                                                                                                             
+#       - image: circleci/php:8.0-apache
         - image: circleci/php:7.2-apache
       steps:
         - checkout
