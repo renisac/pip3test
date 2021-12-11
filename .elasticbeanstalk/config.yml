@@ -1,0 +1,13 @@
+branch-defaults:
+  dev:
+    environment: pip3-dev
+global:
+  application_name: pip3-dev
+  default_ec2_keyname: mvkrenz
+  default_platform: arn:aws:elasticbeanstalk:us-east-2::platform/PHP 8.0 running on
+    64bit Amazon Linux 2/3.3.8
+  default_region: us-east-2
+#  profile: default2
+  repository: null
+  sc: git
+#  workspace_type: Application
