@@ -1,6 +1,6 @@
 branch-defaults:
   dev:
-    environment: pip3-dev
+    environment: pip3dev
 global:
   application_name: pip3-dev
   default_ec2_keyname: mvkrenz
