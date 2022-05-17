@@ -53,11 +53,11 @@ workflows:
           filters:
             branches:
               only: master
-          context: pipprod
+          context: pip3prod
       - deploy-dev:
           requires:
             - build
           filters:
             branches:
               only: dev
-          context: pipdev
+          context: pip3dev
