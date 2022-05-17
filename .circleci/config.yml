@@ -36,7 +36,7 @@ jobs:
                pip install 'six>=1.9' 'botocore==1.11.8' awsebcli==3.12.0
         - run:
             name: Deploy to EB
-            command: eb deploy pip3-dev
+            command: eb deploy pip-dev
   deploy-prod:
     <<: *deploy
   deploy-dev:
@@ -53,11 +53,11 @@ workflows:
           filters:
             branches:
               only: master
-          context: pip3prod
+          context: pipprod
       - deploy-dev:
           requires:
             - build
           filters:
             branches:
               only: dev
-          context: pip3dev
+          context: pipdev
