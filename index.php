@@ -1,2 +1,2 @@
-hello world with python 2.7
+hello world with removing awsebcli version
 
