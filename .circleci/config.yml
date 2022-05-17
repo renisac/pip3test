@@ -3,8 +3,8 @@ jobs:
   build:
     working_directory: /var/www/html
     docker:
-      - image: circleci/php:8.0-apache #php:7.1-apache                                                                                                              
-      # - image: circleci/php:7.2-apache
+      # - image: circleci/php:8.0-apache #php:7.1-apache                                                                                                              
+      - image: circleci/php:7.2-apache
 
     steps:
       - checkout
@@ -23,8 +23,8 @@ jobs:
   deploy: &deploy
       working_directory: /var/www/html
       docker:
-      - image: circleci/php:8.0-apache                                                                                                                             
-      # - image: circleci/php:7.2-apache
+      # - image: circleci/php:8.0-apache                                                                                                                             
+      - image: circleci/php:7.2-apache
       steps:
         - checkout
         - run:
@@ -32,8 +32,8 @@ jobs:
             working_directory: /
             command: |
                sudo apt-get -y -qq update
-               sudo apt-get install -y python3-pip python3-dev build-essential
-               pip3 install 'six>=1.9' 'botocore==1.11.8' awsebcli==3.12.0
+               sudo apt-get install -y python-pip python-dev build-essential
+               pip install 'six>=1.9' 'botocore==1.11.8' awsebcli==3.12.0
         - run:
             name: Deploy to EB
             command: eb deploy pip3dev
