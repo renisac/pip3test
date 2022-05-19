@@ -33,9 +33,9 @@ jobs:
             command: |
                sudo apt-get -y -qq update
                sudo apt-get install -y python3-pip python3-dev build-essential
-               pip3 install 'six>=1.9' 'botocore==1.11.8' awsebcli
+               pip3 install 'six>=1.9' 'botocore==1.11.8' awsebcli==3.14.5
                eb --version
-              # awsebcli==3.12.0
+              # awsebcli==3.12.0 - for python2
         - run:
             name: Deploy to EB
             command: eb deploy pip3dev
